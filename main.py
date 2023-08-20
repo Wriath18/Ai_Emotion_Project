@@ -220,8 +220,8 @@
 #     bot.polling()
 
 
-import speech_recognition as sr
-import pyttsx3
+# import speech_recognition as sr
+# import pyttsx3
 from config import api_key, CLIENT_ID, REDIRECT_URI, CLIENT_SECRET, TEL_API, API_TOKEN
 import openai
 openai.api_key = api_key
@@ -235,10 +235,6 @@ import telebot
 import uuid
 import traceback
 import requests
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-
 
 
 API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"

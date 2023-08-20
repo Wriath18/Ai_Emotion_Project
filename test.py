@@ -15,23 +15,23 @@
 #     score = result[0]['score']
 #     print(f"Sentence: {i}")
 #     print(f"Sentiment: {label}, Score: {score}\n")
-import telebot
-from config import TEL_API
-import random
-from emotions import greeting_list
-# Replace 'YOUR_TOKEN' with your actual bot token
-TOKEN = TEL_API
+# import telebot
+# from config import TEL_API
+# import random
+# from emotions import greeting_list
+# # Replace 'YOUR_TOKEN' with your actual bot token
+# TOKEN = TEL_API
 
-bot = telebot.TeleBot(TOKEN)
+# bot = telebot.TeleBot(TOKEN)
 
-@bot.message_handler(commands=['start'])
-def start(message):
-    bot.reply_to(message, "Hello, I'm your simple Telegram bot!")
+# @bot.message_handler(commands=['start'])
+# def start(message):
+#     bot.reply_to(message, "Hello, I'm your simple Telegram bot!")
 
-@bot.message_handler(func=lambda message: True)
-def echo(message):
-    res = random.choice(greeting_list)
-    bot.reply_to(message, res)
+# @bot.message_handler(func=lambda message: True)
+# def echo(message):
+#     res = random.choice(greeting_list)
+#     bot.reply_to(message, res)
 
-bot.polling()
+# bot.polling()
 

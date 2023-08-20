@@ -1,22 +1,21 @@
-import speech_recognition as sr
-import pyttsx3
+# import speech_recognition as sr
+# import pyttsx3
 from config import api_key
 import openai
 openai.api_key = api_key
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from config import CLIENT_ID, CLIENT_SECRET,REDIRECT_URI
 import random
 
-def speak(string, voice_id=1):
-    engine = pyttsx3.init()
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[voice_id].id)
-    engine.setProperty('rate', 190) # adjust the speaking rate
-    engine.setProperty('volume', 0.9) # adjust the speaking volume
-    engine.say(string)
-    engine.runAndWait()
+# def speak(string, voice_id=1):
+#     engine = pyttsx3.init()
+#     voices = engine.getProperty('voices')
+#     engine.setProperty('voice', voices[voice_id].id)
+#     engine.setProperty('rate', 190) # adjust the speaking rate
+#     engine.setProperty('volume', 0.9) # adjust the speaking volume
+#     engine.say(string)
+#     engine.runAndWait()
 
 def get_playlist_name(mood_category):
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
