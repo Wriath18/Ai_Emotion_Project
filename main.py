@@ -249,7 +249,13 @@ user_history_key = 'user_history'
 user_id_key = 'user_id'
 
 bot_name = "Aura"
-sentiment_analyzer = pipeline('sentiment-analysis', model="nlptown/bert-base-multilingual-uncased-sentiment", framework="pt")
+from transformers import BertForSequenceClassification, BertTokenizer
+
+model_name = "nlptown/bert-base-multilingual-uncased-sentiment"
+model = BertForSequenceClassification.from_pretrained(model_name)
+tokenizer = BertTokenizer.from_pretrained(model_name)
+model_name = "distilbert-base-uncased"
+sentiment_analyzer = pipeline('sentiment-analysis', model=model_name, framework="pt")
 welcome_message = "PLEASE READ BEFORE STARTING\n\nHey there !! This is Aura, an Ai Emotion based song recommendation system.🎶\n\nThings to know\n\n1️⃣ Your chat is always engrypted🔒\n\n2️⃣ Do not share any personal information in the chat🚫\n\n3️⃣ Aura needs atleast 5 statements/Inputs from you to analyse your mood\n\n4️⃣ When you type /stop, the chat gets deleted and refreshed\n\n 5️⃣ No more rules, Enjoyyy😎\n"
 # Replace 'YOUR_TOKEN' with your actual bot token
 TOKEN = TEL_API
