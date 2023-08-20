@@ -226,12 +226,12 @@
 
 # # process_speech()
 # # speak("Hello Sir , I am Aura", voice_id=1)
-strings = ["hello", "heaven", "hero"]
-matched_strings = ""
-for chars in zip(*strings):
-    if all(c == chars[0] for c in chars):
-        matched_strings += chars[0]
-    else:
-        print("No match for characters:", chars)
+# strings = ["hello", "heaven", "hero"]
+# matched_strings = ""
+# for chars in zip(*strings):
+#     if all(c == chars[0] for c in chars):
+#         matched_strings += chars[0]
+#     else:
+#         print("No match for characters:", chars)
 
-print(matched_strings)
+# print(matched_strings)

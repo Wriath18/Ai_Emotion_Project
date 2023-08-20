@@ -232,17 +232,16 @@ from spotipy.oauth2 import SpotifyOAuth
 from transformers import pipeline
 import random
 import telebot
-import uuid
 import traceback
 import requests
 
 
-API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"
-headers = {"Authorization": f"Bearer {API_TOKEN}"}
-def query(payload):
-    response = requests.post(API_URL, headers=headers, json=payload)
-    return response.json()["generated_text"]
-# Dictionary to store user conversation history
+# API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"
+# headers = {"Authorization": f"Bearer {API_TOKEN}"}
+# def query(payload):
+#     response = requests.post(API_URL, headers=headers, json=payload)
+#     return response.json()["generated_text"]
+# # Dictionary to store user conversation history
 conversation_history = {}
 user_id_collection = []
 
