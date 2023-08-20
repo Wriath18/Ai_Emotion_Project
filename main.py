@@ -225,7 +225,7 @@
 from config import api_key, CLIENT_ID, REDIRECT_URI, CLIENT_SECRET, TEL_API, API_TOKEN
 import openai
 openai.api_key = api_key
-from engine import speak, get_playlist_name
+from engine import get_playlist_name
 from emotions import happy, sad, greeting_list, response_greet, stop_response, stop_words, song_refr
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
